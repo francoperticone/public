@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Selector de Transporte</title>
+  </head>
+  <body>
+    <h1>Selector de Transporte</h1>
+    <p>Por favor, especificar una distancia en metros:</p>
+    <input type="text" id="distancia">
+    <button onclick="selectorTransporte()">Selector de Transporte</button>
+    <p id="resultado"></p>
+
+    <script>
+      function selectorTransporte() {
+        const distancia = parseInt(document.getElementById('distancia').value);
+
+        let transporte;
+        if (distancia >= 0 && distancia <= 1000) {
+            transporte = 'a pie';
+        } else if (distancia > 1000 && distancia <= 10000) {
+            transporte = 'en bicicleta';
+        } else if (distancia > 10000 && distancia <= 30000) {
+            transporte = 'en colectivo';
+        } else if (distancia > 30000 && distancia <= 100000) {
+            transporte = 'en auto';
+        } else if (distancia > 100000) {
+            transporte = 'en avión';
+        }
+
+        document.getElementById('resultado').innerHTML = `Para una distancia de ${distancia} metros, debería viajar ${transporte}.`;
+      }
+    </script>
+  </body>
+</html>

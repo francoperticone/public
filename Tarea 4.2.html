@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Encontrar el número más alto</title>
+  </head>
+  <body>
+    <h1>Encontrar el número más alto</h1>
+    <p>The array of numbers is: [1, 5, 3, 9, 2]</p>
+    <button onclick="findMax()">Encontrar el número más alto</button>
+    <p id="resultado"></p>
+
+    <script>
+      function findMax() {
+        const números = [1, 5, 3, 9, 2];
+        let max = números[0];
+
+        for (let i = 1; i < números.length; i++) {
+          if (números[i] > max) {
+            max = números[i];
+          }
+        }
+
+        document.getElementById('resultado').innerHTML = `El número más alto es: ${max}.`;
+      }
+    </script>
+  </body>
+</html>
