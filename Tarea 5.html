@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cuadrados Cambiantes</title>
+  <style>
+    .square {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      display: inline-block;
+      cursor: pointer;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="square" id="square1"></div>
+  <div class="square" id="square2"></div>
+  <div class="square" id="square3"></div>
+
+  <script>
+    // Obtener los elementos de los cuadrados
+    var square1 = document.getElementById("square1");
+    var square2 = document.getElementById("square2");
+    var square3 = document.getElementById("square3");
+
+    // Asignar un evento de clic a cada cuadrado
+    square1.addEventListener("click", function() {
+      document.body.style.backgroundColor = "red";
+    });
+
+    square2.addEventListener("click", function() {
+      document.body.style.backgroundColor = "green";
+    });
+
+    square3.addEventListener("click", function() {
+      document.body.style.backgroundColor = "blue";
+    });
+  </script>
+</body>
+</html>
